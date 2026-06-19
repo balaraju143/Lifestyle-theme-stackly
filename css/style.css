@@ -1,0 +1,572 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+.hero{
+    min-height:calc(100vh - 80px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url('../images/hero/hero-bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    margin-top:0;
+    z-index:1;
+}
+
+
+.hero-content{
+    max-width:800px;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-tag{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:10px 20px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    letter-spacing:2px;
+    font-size:.85rem;
+}
+
+.hero-content h1{
+    margin-bottom:25px;
+    color:#fff;
+}
+
+.hero-content p{
+    color:#f5f5f5;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+}
+
+.scroll-indicator{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.scroll-indicator span{
+    display:block;
+    width:2px;
+    height:50px;
+    background:#fff;
+    animation:scrollDown 1.5s infinite;
+}
+
+@keyframes scrollDown{
+    0%{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        transform:translateY(15px);
+    }
+}
+
+/* ==========================================
+   PHILOSOPHY
+========================================== */
+
+.philosophy{
+    background:#fff;
+}
+
+.philosophy-grid{
+    display:grid;
+    gap:25px;
+}
+
+.philosophy-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.4s;
+}
+
+.philosophy-card:hover{
+    transform:translateY(-10px);
+}
+
+.philosophy-card h3{
+    margin-bottom:15px;
+}
+
+/* ==========================================
+   COLLECTIONS
+========================================== */
+
+.collections{
+    background:#f6f8f6;
+}
+
+.collection-grid{
+    display:grid;
+    gap:25px;
+}
+
+.collection-card{
+    min-height:220px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+
+    color:white;
+    cursor:pointer;
+    transition:.5s;
+    background:
+    linear-gradient(
+    rgba(0,0,0,.2),
+    rgba(0,0,0,.7)),
+    url('../images/collections/collection.jpg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.collection-card:hover{
+    transform:scale(1.03);
+}
+
+.collection-card h3{
+    color:white;
+}
+
+
+
+.collection-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    height:280px;
+    cursor:pointer;
+    
+}
+
+.collection-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.collection-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    display: none;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.2)
+        
+    );
+}
+
+.collection-card h3{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    color:#fff;
+    z-index:2;
+    font-size:1.5rem;
+}
+
+.collection-card:hover img{
+    transform:scale(1.1);
+}
+
+/* ==========================================
+   VIDEO SHOWCASE
+========================================== */
+
+.video-showcase{
+    background:#fff;
+}
+
+.video-wrapper{
+    position:relative;
+    border-radius:25px;
+    overflow:hidden;
+}
+
+.video-wrapper img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.play-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:1.5rem;
+}
+
+.play-btn::before{
+    content:'▶';
+}
+
+/* ==========================================
+   SERVICES SLIDER
+========================================== */
+
+.services-slider{
+    background:#f8faf8;
+}
+
+.slider-container{
+    position:relative;
+    min-height:250px;
+}
+
+.slide{
+    display:none;
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    text-align:center;
+}
+
+.slide.active{
+    display:block;
+}
+
+.slide h3{
+    margin-bottom:15px;
+}
+
+.slider-controls{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+.slider-controls button{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    cursor:pointer;
+    background:var(--primary);
+    color:white;
+    font-size:1.2rem;
+}
+
+/* ==========================================
+   TESTIMONIALS
+========================================== */
+
+.testimonials{
+    background:white;
+}
+
+.testimonial-slider{
+    max-width:800px;
+    margin:auto;
+    position:relative;
+}
+
+.testimonial{
+    display:none;
+    text-align:center;
+}
+
+.testimonial.active{
+    display:block;
+}
+
+.testimonial p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.testimonial h4{
+    color:var(--primary);
+}
+
+/* ==========================================
+   JOURNAL PREVIEW
+========================================== */
+
+.journal-preview{
+    background:#f8faf8;
+}
+
+.journal-grid{
+    display:grid;
+    gap:25px;
+}
+
+.journal-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    transition:.4s;
+}
+
+.journal-card:hover{
+    transform:translateY(-8px);
+}
+
+.journal-card h3{
+    margin-bottom:15px;
+}
+
+.journal-card.large{
+    min-height:300px;
+}
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline{
+    background:#fff;
+}
+
+.timeline-grid{
+    display:grid;
+    gap:25px;
+}
+
+.timeline-item{
+    text-align:center;
+    padding:40px 20px;
+    background:#f8faf8;
+    border-radius:20px;
+}
+
+.timeline-item h3{
+    font-size:3rem;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+
+.timeline-item{
+    text-align:center;
+    padding:40px 20px;
+    background:#f8faf8;
+    border-radius:20px;
+
+    transition:all .4s ease;
+}
+
+.timeline-item:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    background:#ffffff;
+}
+
+.timeline-item h3{
+    transition:.4s ease;
+}
+
+.timeline-item:hover h3{
+    transform:scale(1.1);
+    color:#173a34;
+}
+
+/* ==========================================
+   NEWSLETTER
+========================================== */
+
+.newsletter{
+    background:var(--primary);
+    color:white;
+}
+
+.newsletter-content{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.newsletter-content span{
+    letter-spacing:2px;
+}
+
+.newsletter-content h2{
+    color:white;
+    margin:20px 0;
+}
+
+.newsletter-content p{
+    color:#e5e7eb;
+}
+
+.newsletter-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:30px;
+     
+}
+
+.newsletter-form input{
+    padding:18px;
+}
+
+.newsletter-form button{
+    padding:18px;
+    border-radius:10px;
+    background:white;
+    color:var(--primary);
+    font-weight:600;
+    cursor:pointer;
+}
+.error{
+    display:block;
+    width:100%;
+    color:#fff;
+    font-size:14px;
+    margin-top:5px;
+}
+/* ==========================================
+   SOCIAL WALL
+========================================== */
+
+.social-wall{
+    background:#fff;
+}
+
+.instagram-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.instagram-item{
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.instagram-item img{
+    height:220px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.instagram-item:hover img{
+    transform:scale(1.1);
+}
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(min-width:768px){
+
+    .hero-buttons{
+        flex-direction:row;
+        justify-content:center;
+    }
+
+    .philosophy-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .collection-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .timeline-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .instagram-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .newsletter-form{
+        flex-direction:row;
+    }
+
+    .newsletter-form input{
+        flex:1;
+    }
+
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media(min-width:1024px){
+
+    .collection-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .journal-grid{
+        grid-template-columns:
+        2fr 1fr 1fr;
+    }
+
+    .journal-card.large{
+        grid-row:span 2;
+    }
+
+    .timeline-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .instagram-grid{
+        grid-template-columns:repeat(6,1fr);
+    }
+
+}
+
+.video-wrapper{
+    border-radius:25px;
+    overflow:hidden;
+}
+
+.video-wrapper video{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+    display:block;
+}

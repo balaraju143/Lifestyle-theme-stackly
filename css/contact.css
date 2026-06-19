@@ -1,0 +1,335 @@
+/* ==========================================
+   CONTACT HERO
+========================================== */
+
+.contact-hero{
+    min-height:70vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('../images/contactimg.webp');
+
+    background-size:cover;
+    background-position:center;
+
+    color:#fff;
+}
+
+.contact-hero h1{
+    color:#fff;
+    margin:20px 0;
+    max-width:900px;
+}
+
+.contact-hero p{
+    max-width:700px;
+    margin:auto;
+    color:#f5f5f5;
+}
+
+/* ==========================================
+   CONTACT CARDS
+========================================== */
+
+.contact-info{
+    background:#fff;
+}
+
+.contact-cards{
+    display:grid;
+    gap:25px;
+}
+
+.contact-card{
+    background:#f8faf8;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    transition:.5s ease;
+}
+
+.contact-card i{
+    font-size:2.8rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+}
+
+.contact-card:hover{
+    transform:
+    translateY(-10px)
+    rotate(2deg);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+.contact-form-section{
+    background:#f8faf8;
+}
+
+.contact-grid{
+    display:grid;
+    gap:40px;
+    align-items:center;
+}
+
+.contact-image img{
+    width:100%;
+    border-radius:25px;
+}
+
+.contact-form-box{
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:25px;
+}
+
+.contact-form{
+    display:grid;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.contact-form textarea{
+    height:180px;
+    resize:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:var(--primary);
+
+    box-shadow:
+    0 0 0 4px rgba(31,77,69,.12);
+}
+
+.contact-form button{
+    background:var(--primary);
+
+    color:#fff;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#173a34;
+}
+.error{
+    display:block;
+    color:#ef4444;
+    font-size:14px;
+    margin-top:5px;
+    min-height:18px;
+}
+
+/* ==========================================
+   OFFICES
+========================================== */
+
+.offices{
+    background:#fff;
+}
+
+.office-grid{
+    display:grid;
+    gap:25px;
+}
+
+.office-card{
+    background:#f8faf8;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    transition:.4s;
+}
+
+.office-card:hover{
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.08);
+}
+
+.office-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+/* ==========================================
+   FAQ
+========================================== */
+
+.contact-faq{
+    background:#f8faf8;
+}
+
+.faq-item{
+    background:#fff;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+}
+
+.faq-question{
+    width:100%;
+
+    padding:20px;
+
+    border:none;
+
+    background:none;
+
+    text-align:left;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.faq-answer{
+    display:none;
+
+    padding:0 20px 20px;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+/* ==========================================
+   MAP
+========================================== */
+
+.map-section{
+    background:#fff;
+}
+
+.map-placeholder{
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.map-placeholder iframe{
+    width:100%;
+    height:450px;
+    border:0;
+
+    transition:.5s;
+}
+
+.map-placeholder:hover iframe{
+    transform:scale(1.02);
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+.contact-cta{
+    text-align:center;
+
+    margin-top:80px;
+
+    padding:80px 30px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #1f4d45,
+    #173a34);
+
+    color:#fff;
+}
+
+.contact-cta h2{
+    color:#fff;
+    margin-bottom:25px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(min-width:768px){
+
+    .contact-cards{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .office-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media(min-width:1024px){
+
+    .contact-form-box{
+        padding:50px;
+    }
+
+}

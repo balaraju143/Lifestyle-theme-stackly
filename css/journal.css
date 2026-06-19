@@ -1,0 +1,342 @@
+/* ==========================================
+   JOURNAL HERO
+========================================== */
+
+.journal-hero{
+    min-height:70vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)),
+    url('../images/nutrition.webp');
+
+    background-size:cover;
+    background-position:center;
+
+    color:#fff;
+}
+
+.journal-hero h1{
+    color:#fff;
+    margin:20px 0;
+    max-width:900px;
+}
+
+.journal-hero p{
+    max-width:700px;
+    margin:auto;
+    color:#f5f5f5;
+}
+
+/* ==========================================
+   FEATURED ARTICLE
+========================================== */
+
+.featured-article{
+    background:#fff;
+}
+
+.featured-grid{
+    display:grid;
+    gap:40px;
+    align-items:center;
+}
+
+.featured-image{
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.featured-image img{
+    width:100%;
+    height:500px;
+
+    object-fit:cover;
+
+    transition:.8s ease;
+}
+
+.featured-image:hover img{
+    transform:scale(1.1);
+}
+
+.featured-content span{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.featured-content h2{
+    margin:20px 0;
+}
+
+/* ==========================================
+   JOURNAL GRID
+========================================== */
+
+.journal-grid-section{
+    background:#f8faf8;
+}
+
+.journal-grid{
+    display:grid;
+    gap:25px;
+}
+
+.journal-card{
+    min-height:260px;
+
+    border-radius:25px;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:30px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.5s;
+}
+
+.journal-card:nth-child(1){
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6)),
+    url('../images/morningimg.webp');
+    background-size:cover;
+}
+
+.journal-card:nth-child(2){
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6)),
+    url('../images/nutrition.webp');
+    background-size:cover;
+}
+
+.journal-card:nth-child(3){
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6)),
+    url('../images/bed.webp');
+    background-size:cover;
+}
+
+.journal-card:nth-child(4){
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6)),
+    url('../images/mindfulness.webp');
+    background-size:cover;
+}
+
+.journal-card:nth-child(5){
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6)),
+    url('../images/exercise\ \(1\).webp');
+    background-size:cover;
+}
+
+.journal-card:nth-child(6){
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6)),
+    url('../images/fittness\ \(1\).webp');
+    background-size:cover;
+}
+
+.journal-card:hover{
+    transform:rotate(-2deg) scale(1.03);
+}
+
+/* ==========================================
+   CATEGORIES
+========================================== */
+
+.categories{
+    background:#fff;
+}
+
+.category-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+.category{
+    width:180px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:40px;
+
+    background:darkcyan;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+@media(max-width:768px){
+
+    .category{
+        width:140px;
+        height:55px;
+    }
+
+}
+
+.category:hover{
+    background:var(--primary);
+    color:#fff;
+
+    transform:translateY(-5px);
+}
+
+/* ==========================================
+   INSIGHTS
+========================================== */
+
+.insights{
+    background:#f8faf8;
+}
+
+.insight-slider{
+    max-width:900px;
+    margin:auto;
+}
+
+.insight-slide{
+    display:none;
+
+    text-align:center;
+
+    background:#fff;
+
+    padding:60px 40px;
+
+    border-radius:25px;
+}
+
+.insight-slide.active{
+    display:block;
+}
+
+.insight-slide p{
+    font-size:1.3rem;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+.insight-slide h4{
+    color:var(--primary);
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+.journal-cta{
+    background:
+    linear-gradient(
+    135deg,
+    #1f4d45,
+    #173a34);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:120px 20px;
+}
+
+.journal-cta h2{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.journal-form{
+    max-width:600px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.journal-form input{
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+}
+
+.journal-form button{
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.journal-form button:hover{
+    transform:translateY(-4px);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(min-width:768px){
+
+    .featured-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .journal-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .journal-form{
+        flex-direction:row;
+    }
+
+    .journal-form input{
+        flex:1;
+    }
+
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media(min-width:1024px){
+
+    .journal-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .journal-card:nth-child(1){
+        grid-column:span 2;
+    }
+
+}

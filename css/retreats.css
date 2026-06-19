@@ -1,0 +1,321 @@
+/* ==========================================
+   RETREAT HERO
+========================================== */
+
+.retreat-hero{
+    min-height:75vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("../images/oceanimg.webp");
+
+    background-size:cover;
+    background-position:center;
+
+    color:#fff;
+}
+
+.retreat-hero h1{
+    color:#fff;
+    margin:20px 0;
+    max-width:900px;
+}
+
+.retreat-hero p{
+    color:#f5f5f5;
+    max-width:700px;
+    margin:auto;
+}
+
+/* ==========================================
+   DESTINATIONS
+========================================== */
+
+.destinations{
+    background:#fff;
+}
+
+.destination-grid{
+    display:grid;
+    gap:25px;
+}
+
+.destination-card{
+    height:420px;
+
+    border-radius:25px;
+    position: relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:30px;
+
+    position:relative;
+
+    transition:.5s ease;
+       background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.destination-card::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0),
+    rgba(0,0,0,.55));
+
+    z-index:1;
+}
+
+
+.destination-card h3{
+    position:relative;
+    z-index:2;
+    color:#fff;
+      font-size:2rem;
+
+}
+
+
+.destination-card:hover{
+    transform:scale(1.03);
+}
+
+.bali{
+    background:
+    url('../images/baliimg.webp');
+    background-size:cover;
+    background-position:center;
+     background-repeat: no-repeat;
+}
+
+
+
+.swiss{
+    background:
+    url('../images/swisalpsimg.webp');
+    background-position:center;
+    background-position: center;
+      background-repeat: no-repeat;
+     
+}
+
+.maldives{
+    background:
+    url('../images/maldives.webp');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+/* ==========================================
+   JOURNEY
+========================================== */
+
+.journey{
+    background:#f8faf8;
+}
+
+.journey-grid{
+    display:grid;
+    gap:25px;
+}
+
+.journey-item{
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    border-left:5px solid var(--primary);
+
+    transition:.4s;
+}
+
+.journey-item:hover{
+    transform:translateX(15px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+}
+
+.journey-item h3{
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+/* ==========================================
+   PACKAGES
+========================================== */
+
+.packages{
+    background:#fff;
+}
+
+.package-grid{
+    display:grid;
+    gap:25px;
+}
+
+.package-card{
+    padding:40px;
+
+    border-radius:25px;
+
+    border:2px solid #e5e7eb;
+
+    transition:.4s;
+
+    position:relative;
+}
+
+.package-card:hover{
+    border-color:var(--primary);
+
+    box-shadow:
+    0 0 25px rgba(31,77,69,.25);
+
+    transform:translateY(-10px);
+}
+
+.package-card span{
+    display:inline-block;
+
+    margin:15px 0;
+
+    color:var(--primary);
+
+    font-weight:600;
+}
+
+/* ==========================================
+   STORIES
+========================================== */
+
+.guest-stories{
+    background:#f8faf8;
+}
+
+.story-grid{
+    display:grid;
+    gap:20px;
+}
+
+.story-image{
+    overflow:hidden;
+    border-radius:25px;
+}
+.story-image img{
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    transition:.6s ease;
+}
+
+.story-image:hover img{
+    transform:scale(1.08);
+}
+.story-image img{
+    filter:none !important;
+    opacity:1 !important;
+}
+/* ==========================================
+   CTA
+========================================== */
+
+.retreat-cta{
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #1f4d45,
+    #173a34);
+
+    color:#fff;
+}
+
+.retreat-cta h2{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.retreat-cta .btn-primary{
+    animation:pulseBtn 2s infinite;
+}
+
+@keyframes pulseBtn{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(min-width:768px){
+
+    .destination-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .journey-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .package-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .story-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media(min-width:1024px){
+
+    .journey-grid{
+        grid-template-columns:
+        repeat(4,1fr);
+    }
+
+}

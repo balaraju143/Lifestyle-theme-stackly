@@ -1,0 +1,68 @@
+.error-hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(15,23,42,.75),
+    rgba(31,77,69,.75)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600');
+
+    background-size:cover;
+    background-position:center;
+
+    
+}
+
+.error-content{
+    max-width:700px;
+}
+
+.error-content span{
+    font-size:8rem;
+    font-weight:800;
+    color:#fff;
+    display:block;
+    line-height:1;
+}
+
+.error-content h1{
+    color:#fff;
+    margin:20px 0;
+}
+
+.error-content p{
+    color:#e5e7eb;
+    margin-bottom:35px;
+    font-size:1.1rem;
+}
+
+.error-btn{
+    display:inline-block;
+
+    background:#1f4d45;
+    color:#fff;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+}
+
+.error-btn:hover{
+    transform:translateY(-4px);
+    background:#173a34;
+}
+body{
+    margin:0;
+}

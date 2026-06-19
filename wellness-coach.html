@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet"
+      href="css/admin-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <h2>WELLNESS</h2>
+
+        </div>
+
+        <ul>
+
+            <li id="dashboard-link"
+            class="active">
+                <i class="fas fa-home"></i>
+                Coach Dashboard
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-users"></i>
+                Members
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-spa"></i>
+                Programs
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-mountain"></i>
+                Retreats
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-calendar"></i>
+                Bookings
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-file"></i>
+                Reports
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-cog"></i>
+                Settings
+            </li>
+
+            <li id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+    <section class="welcome-card">
+
+        <h1>
+            Welcome Coach 👋
+        </h1>
+
+        <p>
+            Manage wellness sessions, guide members,
+            monitor progress and inspire healthy living.
+        </p>
+
+    </section>
+
+    <!-- Stats -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <i class="fas fa-users"></i>
+
+            <h2>185</h2>
+
+            <p>Active Members</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-spa"></i>
+
+            <h2>24</h2>
+
+            <p>Sessions This Month</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-heart"></i>
+
+            <h2>92%</h2>
+
+            <p>Client Satisfaction</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-star"></i>
+
+            <h2>4.9</h2>
+
+            <p>Coach Rating</p>
+
+        </div>
+
+    </section>
+
+    <!-- Upcoming Sessions -->
+
+    <section class="table-card">
+
+        <h2>
+            Upcoming Coaching Sessions
+        </h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Member</th>
+                        <th>Program</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Rahul Sharma</td>
+                        <td>Mindfulness Coaching</td>
+                        <td>22 June</td>
+                        <td>Scheduled</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Priya Patel</td>
+                        <td>Nutrition Guidance</td>
+                        <td>23 June</td>
+                        <td>Scheduled</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Amit Kumar</td>
+                        <td>Fitness Transformation</td>
+                        <td>24 June</td>
+                        <td>Scheduled</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Assigned Programs -->
+
+    <section class="table-card">
+
+        <h2>
+            Assigned Wellness Programs
+        </h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Program</th>
+                        <th>Category</th>
+                        <th>Members</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Mindfulness Mastery</td>
+                        <td>Meditation</td>
+                        <td>58</td>
+                        <td>Active</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Fitness Transformation</td>
+                        <td>Fitness</td>
+                        <td>72</td>
+                        <td>Active</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Healthy Nutrition</td>
+                        <td>Nutrition</td>
+                        <td>55</td>
+                        <td>Active</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Coach Profile -->
+
+    <section class="user-card">
+
+        <h2>
+            Coach Information
+        </h2>
+
+        <p>
+            Email:
+            <span id="userEmail"></span>
+        </p>
+
+        <p>
+            Role:
+            <span id="userRole"></span>
+        </p>
+
+        <p>
+            Specialization:
+            Wellness Coaching
+        </p>
+
+    </section>
+
+</main>
+
+
+</div>
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

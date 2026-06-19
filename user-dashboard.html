@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>User Dashboard</title>
+
+<link rel="stylesheet"
+      href="css/admin-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <h2>WELLNESS</h2>
+
+        </div>
+
+        <ul>
+
+            <li id="dashboard-link"
+            class="active">
+                <i class="fas fa-home"></i>
+                My Dashboard
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-users"></i>
+                Members
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-spa"></i>
+                Programs
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-mountain"></i>
+                Retreats
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-calendar"></i>
+                Bookings
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-file"></i>
+                Reports
+            </li>
+
+            <li class="coming-soon">
+                <i class="fas fa-cog"></i>
+                Settings
+            </li>
+
+            <li id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="dashboard-content">
+
+    <section class="welcome-card">
+
+        <h1>
+            Welcome To Your Wellness Journey 🌿
+        </h1>
+
+        <p>
+            Track your wellness progress, upcoming sessions,
+            retreat bookings and personalized health goals.
+        </p>
+
+    </section>
+
+    <!-- Stats -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <i class="fas fa-heart"></i>
+
+            <h2>85%</h2>
+
+            <p>Wellness Score</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-calendar-check"></i>
+
+            <h2>12</h2>
+
+            <p>Completed Sessions</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-spa"></i>
+
+            <h2>3</h2>
+
+            <p>Retreats Joined</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-bullseye"></i>
+
+            <h2>7/10</h2>
+
+            <p>Goals Achieved</p>
+
+        </div>
+
+    </section>
+
+    <!-- My Wellness Programs -->
+
+    <section class="table-card">
+
+        <h2>
+            My Wellness Programs
+        </h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Program</th>
+                        <th>Category</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Mindfulness Mastery</td>
+                        <td>Meditation</td>
+                        <td>8 Weeks</td>
+                        <td>In Progress</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Healthy Nutrition</td>
+                        <td>Nutrition</td>
+                        <td>6 Weeks</td>
+                        <td>Active</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Fitness Transformation</td>
+                        <td>Fitness</td>
+                        <td>12 Weeks</td>
+                        <td>Active</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Upcoming Activities -->
+
+    <section class="table-card">
+
+        <h2>
+            Upcoming Activities
+        </h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Activity</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Yoga Session</td>
+                        <td>22 June</td>
+                        <td>7:00 AM</td>
+                        <td>Scheduled</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Meditation Workshop</td>
+                        <td>25 June</td>
+                        <td>6:00 PM</td>
+                        <td>Scheduled</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Nutrition Consultation</td>
+                        <td>28 June</td>
+                        <td>5:00 PM</td>
+                        <td>Scheduled</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- User Profile -->
+
+    <section class="user-card">
+
+        <h2>
+            My Profile
+        </h2>
+
+        <p>
+            Email:
+            <span id="userEmail"></span>
+        </p>
+
+        <p>
+            Role:
+            <span id="userRole"></span>
+        </p>
+
+        <p>
+            Membership:
+            Premium Wellness Member
+        </p>
+
+        <p>
+            Current Goal:
+            Improve Mindfulness & Fitness
+        </p>
+
+    </section>
+
+</main>
+
+</div>
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>
