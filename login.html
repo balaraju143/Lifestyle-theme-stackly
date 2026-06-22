@@ -86,29 +86,53 @@
                 </p>
 
                 <form class="login-form">
+                     
+                <div class="custom-select">
 
-                    <select id="role">
+    <div class="selected-option"
+         onclick="toggleRoles()">
 
-                        <option value="">
-                            Select Role
-                        </option>
+        <span id="selectedRole">
 
-                        <option value="user">
-                            Wellness User
-                        </option>
+            Select Role
 
-                        <option value="coach">
-                            Wellness Coach
-                        </option>
+        </span>
 
-                        <option value="admin">
-                            Admin
-                        </option>
+        <i class="fas fa-chevron-down"></i>
 
-                    </select>
+    </div>
 
-                    <small class="error"
-                           id="roleError"></small>
+    <div class="select-options"
+         id="roleOptions">
+
+        <div onclick="selectRole('user')">
+
+            Wellness User
+
+        </div>
+
+        <div onclick="selectRole('coach')">
+
+            Wellness Coach
+
+        </div>
+
+        <div onclick="selectRole('admin')">
+
+            Admin
+
+        </div>
+
+    </div>
+
+</div>
+
+<input type="hidden"
+       id="role">
+
+<small class="error"
+       id="roleError"></small>
+
 
                     <input
                     type="text"

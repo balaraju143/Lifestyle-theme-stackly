@@ -46,7 +46,6 @@ body{
 .sidebar i{
     margin-right:10px;
 }
-
 .dashboard-content{
     flex:1;
     padding:30px;
@@ -122,18 +121,202 @@ td{
 
 }
 
+
+#dashboardEmail{
+
+    font-size:1.2rem;
+
+    word-break:break-word;
+
+    overflow-wrap:anywhere;
+}
+
+
 @media(max-width:768px){
 
-    .dashboard-layout{
-        flex-direction:column;
+    .welcome-card h1{
+
+        font-size:1.4rem;
+
+    }
+
+    #dashboardEmail{
+
+        font-size:1rem;
+
+        display:inline-block;
+
+        max-width:100%;
+
+        overflow:hidden;
+
+        text-overflow:ellipsis;
+
+        white-space:nowrap;
+
+        vertical-align:middle;
+    }
+
+}
+
+.menu-toggle{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    .menu-toggle{
+
+        display:block;
+
+        position:absolute;
+
+        top:20px;
+        left:20px;
+
+        width:60px;
+        height:60px;
+
+        border:none;
+
+        border-radius:15px;
+
+        background:#fff;
+
+        color:#1f4d45;
+
+        font-size:28px;
+
+        cursor:pointer;
+
+        z-index:1001;
     }
 
     .sidebar{
+
+        position:fixed;
+
+        top:0;
+        left:-100%;
+
+        width:280px;
+
+        height:100vh;
+
+        transition:.4s ease;
+
+        z-index:1000;
+    }
+
+    .sidebar.active{
+
+        left:0;
+    }
+
+    .dashboard-content{
+
         width:100%;
+
+        padding:100px 20px 20px;
     }
 
     .stats-grid{
+
         grid-template-columns:1fr;
     }
 
+    .welcome-card h1{
+
+        font-size:1.4rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar.active + .menu-toggle{
+
+        display:none;
+    }
+
+}
+.menu-toggle{
+
+    transition:.3s ease;
+}
+
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        padding-top:90px;
+    }
+
+    .menu-toggle{
+
+        top:20px;
+        left:50px; /* place X near sidebar edge */
+
+        z-index:1002;
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        padding-top:30px;
+    }
+
+    .sidebar-logo{
+
+        text-align:center;
+
+        margin-top:80px;
+
+        margin-bottom:30px;
+        text-align:left;
+
+        padding-left:10px;
+    }
+
+    .sidebar-logo h2{
+
+        font-size:2rem;
+
+        margin:0 auto;
+    }
+
+}
+
+
+/* FIX HORIZONTAL SCROLL */
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
+.dashboard-layout{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+}
+
+.dashboard-content{
+    flex:1;
+    width:calc(100% - 280px);
+    overflow-x:hidden;
+}
+
+
+.welcome-card,
+.stat-card,
+.table-card,
+.user-card{
+    overflow:hidden;
 }

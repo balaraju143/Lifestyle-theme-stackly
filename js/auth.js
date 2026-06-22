@@ -219,3 +219,33 @@ role.value
     }
 
 });
+
+
+function toggleRoles(){
+
+    document
+    .getElementById("roleOptions")
+    .classList.toggle("active");
+
+}
+
+function selectRole(role){
+
+    document
+    .getElementById("role")
+    .value = role;
+
+    document
+    .getElementById("selectedRole")
+    .innerText =
+    role === "user"
+    ? "Wellness User"
+    : role === "coach"
+    ? "Wellness Coach"
+    : "Admin";
+
+    document
+    .getElementById("roleOptions")
+    .classList.remove("active");
+
+}

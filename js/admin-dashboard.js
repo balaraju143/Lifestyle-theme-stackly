@@ -1,4 +1,12 @@
-document.addEventListener("DOMContentLoaded",()=>{
+/* ==========================================
+   ADMIN DASHBOARD JS
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ==========================================
+       USER INFO
+    ========================================== */
 
     const email =
     localStorage.getItem("userEmail");
@@ -6,21 +14,45 @@ document.addEventListener("DOMContentLoaded",()=>{
     const role =
     localStorage.getItem("userRole");
 
-    document.getElementById(
-    "userEmail"
-    ).textContent =
-    email || "demo@gmail.com";
+    const userEmail =
+    document.getElementById("userEmail");
 
-    document.getElementById(
-    "userRole"
-    ).textContent =
-    role || "Admin";
+    const userRole =
+    document.getElementById("userRole");
+
+    const dashboardEmail =
+    document.getElementById("dashboardEmail");
+
+    if(userEmail){
+
+        userEmail.textContent =
+        email || "demo@gmail.com";
+
+    }
+
+    if(userRole){
+
+        userRole.textContent =
+        role || "Admin";
+
+    }
+
+    if(dashboardEmail){
+
+        dashboardEmail.textContent =
+        email || "Guest";
+
+    }
+
+    /* ==========================================
+       COMING SOON PAGES
+    ========================================== */
 
     document
     .querySelectorAll(".coming-soon")
-    .forEach(item=>{
+    .forEach(item => {
 
-        item.addEventListener("click",()=>{
+        item.addEventListener("click", () => {
 
             window.location.href =
             "404.html";
@@ -29,58 +61,109 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     });
 
-    document
-    .getElementById("logoutBtn")
-    .addEventListener("click",()=>{
+    /* ==========================================
+       LOGOUT BUTTONS
+    ========================================== */
 
-        localStorage.clear();
+    const logoutBtn =
+    document.getElementById("logoutBtn");
 
-        window.location.href =
-        "index.html";
+    if(logoutBtn){
 
-    });
+        logoutBtn.addEventListener("click", () => {
 
-    document
-    .getElementById("logoutBtn2")
-    .addEventListener("click",()=>{
+            localStorage.clear();
 
-        localStorage.clear();
+            window.location.href =
+            "index.html";
 
-        window.location.href =
-        "login.html";
+        });
 
-    });
+    }
+
+    const logoutBtn2 =
+    document.getElementById("logoutBtn2");
+
+    if(logoutBtn2){
+
+        logoutBtn2.addEventListener("click", () => {
+
+            localStorage.clear();
+
+            window.location.href =
+            "login.html";
+
+        });
+
+    }
+
+    /* ==========================================
+       DASHBOARD LINK
+    ========================================== */
+
+    const dashboardLink =
+    document.getElementById("dashboardLink");
+
+    if(dashboardLink){
+
+        dashboardLink.addEventListener("click", () => {
+
+            const role =
+            localStorage.getItem("userRole");
+
+            if(role === "admin"){
+
+                window.location.href =
+                "admin-dashboard.html";
+
+            }
+
+            else if(role === "coach"){
+
+                window.location.href =
+                "wellness-coach.html";
+
+            }
+
+            else{
+
+                window.location.href =
+                "user-dashboard.html";
+
+            }
+
+        });
+
+    }
 
 });
 
 
-const dashboardLink =
-document.getElementById("dashboardLink");
+const menuToggle =
+document.getElementById("menuToggle");
 
-dashboardLink.addEventListener("click",()=>{
+const sidebar =
+document.querySelector(".sidebar");
 
-    const role =
-    localStorage.getItem("userRole");
+if(menuToggle){
+menuToggle.addEventListener("click",()=>{
 
-    if(role === "admin"){
+    sidebar.classList.toggle("active");
 
-        window.location.href =
-        "admin-dashboard.html";
+    if(sidebar.classList.contains("active")){
 
-    }
-
-    else if(role === "coach"){
-
-        window.location.href =
-        "wellness-coach.html";
+        menuToggle.innerHTML =
+        '<i class="fas fa-times"></i>';
 
     }
 
     else{
 
-        window.location.href =
-        "user-dashboard.html";
+        menuToggle.innerHTML =
+        '<i class="fas fa-bars"></i>';
 
     }
 
 });
+
+}

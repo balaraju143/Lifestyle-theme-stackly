@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if(insightSlides.length > 0){
 
+        showSlide(0);
+
         setInterval(() => {
 
             currentSlide++;
@@ -94,20 +96,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ==========================================
-       NEWSLETTER FORM
+       NEWSLETTER FORM VALIDATION
     ========================================== */
-
-    const journalForm =
+    
+    const newsletterForm =
     document.querySelector(".journal-form");
 
-    if(journalForm){
+    if(newsletterForm){
 
-        journalForm.addEventListener("submit",(e)=>{
+        newsletterForm.addEventListener("submit",(e)=>{
 
             e.preventDefault();
 
+            const email =
+            document.getElementById("newsletterEmail");
+
+            const error =
+            document.getElementById("newsletterError");
+
+            error.textContent = "";
+
+            if(
+                !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
+                .test(email.value.trim())
+            ){
+
+                error.textContent =
+                "Please enter a valid email address";
+
+                setTimeout(()=>{
+
+                    error.textContent = "";
+
+                },3000);
+
+                return;
+            }
+
             const button =
-            journalForm.querySelector("button");
+            newsletterForm.querySelector("button");
 
             button.innerText =
             "Subscribed ✓";
@@ -118,23 +145,41 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.color =
             "#fff";
 
-            setTimeout(() => {
+            setTimeout(()=>{
 
                 button.innerText =
                 "Subscribe";
 
                 button.style.background =
-                "#fff";
-
-                button.style.color =
                 "#1f4d45";
 
-                journalForm.reset();
+                newsletterForm.reset();
 
             },3000);
 
         });
 
     }
+
+    /* ==========================================
+       FEATURED IMAGE PARALLAX
+    ========================================== */
+
+    const featuredImage =
+    document.querySelector(".featured-image img");
+
+    window.addEventListener("scroll",()=>{
+
+        if(featuredImage){
+
+            let scroll =
+            window.pageYOffset;
+
+            featuredImage.style.transform =
+            `translateY(${scroll * 0.03}px)`;
+
+        }
+
+    });
 
 });

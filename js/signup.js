@@ -234,3 +234,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+
+function toggleSignupRoles(){
+
+    document
+    .getElementById("signupRoleOptions")
+    .classList.toggle("active");
+
+}
+
+function selectSignupRole(role){
+
+    document
+    .getElementById("role")
+    .value = role;
+
+    document
+    .getElementById("selectedSignupRole")
+    .innerText =
+
+    role === "user"
+    ? "Wellness User"
+
+    : role === "coach"
+    ? "Wellness Coach"
+
+    : "Admin";
+
+    document
+    .getElementById("signupRoleOptions")
+    .classList.remove("active");
+
+}function toggleSignupRoles(){
+
+    document
+    .getElementById("signupRoleOptions")
+    .classList.toggle("active");
+
+}
+
+function selectSignupRole(role){
+
+    document
+    .getElementById("role")
+    .value = role;
+
+    document
+    .getElementById("selectedSignupRole")
+    .innerText =
+
+    role === "user"
+    ? "Wellness User"
+
+    : role === "coach"
+    ? "Wellness Coach"
+
+    : "Admin";
+
+    document
+    .getElementById("signupRoleOptions")
+    .classList.remove("active");
+
+}
