@@ -196,6 +196,21 @@
     margin-bottom:25px;
 }
 
+
+.press-logos div{
+
+    transition:.4s ease;
+    cursor:pointer;
+}
+
+.press-logos div:hover{
+
+    transform:translateY(-10px);
+
+    background:#1f4d45;
+
+    color:#fff;
+}
 /* ==========================================
    TABLET
 ========================================== */

@@ -320,3 +320,38 @@ body{
 .user-card{
     overflow:hidden;
 }
+
+
+/* Remove left/right black space */
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+section,
+.container,
+main,
+header,
+footer{
+    width:100%;
+    max-width:100%;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+@media(max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .container{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
